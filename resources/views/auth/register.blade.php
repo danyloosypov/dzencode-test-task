@@ -61,6 +61,22 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="captcha-div" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
+                            <div class="captcha col-md-6">
+                                <div id="captcha-div" class="">
+                                    <span>{!! captcha_img() !!}</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="captcha-input" class="col-md-4 col-form-label text-md-right">{{ __('Captcha') }}</label>
+                            <div class="col-md-6">
+                                <input class="form-control" id="captcha-input" type="text" placeholder="Enter captcha" name="captcha">
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -74,4 +90,16 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('#reload').click(function() {
+        $.ajax({
+            type:'GET',
+            url:'reload-captcha',
+            success:function(data) {
+                $(".captcha span").html(data.captcha)
+            }
+        });
+    });
+</script>
 @endsection

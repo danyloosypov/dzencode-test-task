@@ -15,9 +15,13 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+     <!-- Bootstrap CSS -->
+     <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+       
+     <!-- Bootstrap Bundle with Popper -->
+     <script src="{{asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 </head>
 <body>
     <div id="app">
@@ -76,5 +80,6 @@
             @yield('content')
         </main>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </body>
 </html>

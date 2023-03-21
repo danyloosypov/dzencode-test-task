@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\CaptchaController;
+
 Route::get('/', function () {
     return view('welcome');
 });
