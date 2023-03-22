@@ -12,6 +12,8 @@
 */
 
 use App\Http\Controllers\CaptchaController;
+use App\Http\Controllers\CommentsController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,3 +22,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/comments', 'CommentsController@store')->name('comments.store');

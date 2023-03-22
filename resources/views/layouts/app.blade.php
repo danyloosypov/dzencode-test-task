@@ -19,7 +19,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
      <!-- Bootstrap CSS -->
      <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-       
+    
+
      <!-- Bootstrap Bundle with Popper -->
      <script src="{{asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 </head>
