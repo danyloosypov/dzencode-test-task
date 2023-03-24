@@ -23,6 +23,12 @@
 
      <!-- Bootstrap Bundle with Popper -->
      <script src="{{asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+     <style>
+        /* Add a border to the image on hover */
+        img:hover {
+            border: 1px solid blue;
+        }
+    </style>
 </head>
 <body>
     <div id="app">

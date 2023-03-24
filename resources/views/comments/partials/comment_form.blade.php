@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
         <label for="file">File (optional)</label>
         <input type="file" class="form-control-file" name="file" id="file">
       </div>
+      <input type="hidden" name="parent_id" value="{{ $parentId ?? null }}"  id="parent-id-input">
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Add Comment</button>
       </div>
@@ -28,3 +29,12 @@ use Illuminate\Support\Facades\Route;
 </div>
 
 
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif

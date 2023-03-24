@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+
+
+
+
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -8,8 +12,13 @@
         @if(session('success'))
           <div class="alert alert-success">{{ session('success') }}</div>
         @endif
-        @include('comments.partials.comment_form')
-        @include('comments.partials.comment_replies', ['comments' => $comments, 'padding' => 0])
+        @include('comments.partials.comment_form', ['parentId' => NULL])
+        @include('comments.partials.comment_replies', ['comments' => $comments, 'padding' => 10])
+        <div class="d-flex justify-content-center">
+          {{ $comments->links() }}
+      </div>
+      
+
       </div>
     </div>
   </div>
@@ -24,6 +33,7 @@
       $('.reply-btn').click(function() {
         var commentId = $(this).data('comment-id');
         var form = $('#reply-form-' + commentId);
+        form.find('#parent-id-input').val(commentId) || null;
 
         // Toggle the visibility of the reply form
         form.toggle();
@@ -32,6 +42,3 @@
   </script>
 @endsection
 
-@section('scripts')
-  
-@endsection
