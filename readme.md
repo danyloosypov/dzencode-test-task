@@ -1,3 +1,5 @@
+## In order to run the project:
+
 1. Download zip and extract it to your server.
 2. Open terminal and run "composer update".
 3. Rename .env.example file to .env.
