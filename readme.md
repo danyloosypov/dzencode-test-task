@@ -5,6 +5,12 @@ On the comment page user can upload txt|pdf|png|jpg files. If user uploads image
 
 [laravel.pdf](https://github.com/danyloosypov/dzencode-test-task/files/11072128/laravel.pdf)
 
+## Tech stack
+Laravel ^5.8
+php ^7.1
+Apache 2.4
+OpenServer
+
 
 ## In order to run the project:
 
